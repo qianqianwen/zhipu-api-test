@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific
+allure-results/
+allure-report/
+metrics_*.json
+.env.local

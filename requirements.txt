@@ -1,0 +1,16 @@
+# Core
+requests>=2.31.0
+PyYAML>=6.0
+
+# Testing
+pytest>=7.4.0
+pytest-html>=4.0.0
+pytest-xdist>=3.5.0       # Parallel test execution
+pytest-ordering>=0.6       # Test ordering
+pytest-rerunfailures>=13.0 # Retry flaky tests
+
+# Reporting
+allure-pytest>=2.13.0
+
+# Code quality (optional, for development)
+ruff>=0.1.0

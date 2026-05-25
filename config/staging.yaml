@@ -1,0 +1,18 @@
+# Staging environment configuration
+# Inherits from base.yaml, overrides specific values
+
+api:
+  base_url: "https://open.bigmodel.cn/api/paas/v4"
+
+# Use cheaper model for staging tests
+model:
+  default: "glm-4-flash"
+
+# Relax thresholds for staging
+performance:
+  max_ttft_ms: 5000
+  max_total_latency_ms: 60000
+  max_error_rate: 0.05
+
+logging:
+  level: "DEBUG"

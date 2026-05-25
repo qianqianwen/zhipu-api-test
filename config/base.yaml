@@ -1,0 +1,37 @@
+# Base configuration for Zhipu API testing
+api:
+  base_url: "https://open.bigmodel.cn/api/paas/v4"
+  # API Key from environment variable or override in env-specific config
+  api_key: "${ZHIPU_API_KEY}"
+
+# Default model for testing
+model:
+  default: "glm-4-flash"
+  chat_models:
+    - "glm-4-flash"
+    - "glm-4-plus"
+    - "glm-4"
+  embedding_models:
+    - "embedding-3"
+
+# Timeout settings (seconds)
+timeout:
+  connect: 10
+  read: 60
+  stream_read: 120
+
+# Retry settings
+retry:
+  max_retries: 3
+  backoff_factor: 0.5
+
+# Performance thresholds
+performance:
+  max_ttft_ms: 3000          # Time To First Token (ms)
+  max_total_latency_ms: 30000 # Total response latency (ms)
+  max_error_rate: 0.01        # 1% error rate threshold
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s [%(levelname)s] %(name)s - %(message)s"
